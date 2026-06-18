@@ -150,42 +150,42 @@
       <div class="masonry-item" onclick="openLightbox('foto1')">
         <img src="img/Preboda Pablo & Natalia-8.jpg" alt="Natalia y Pablo"
           style="width:100%;display:block;border-radius:3px;">
-        
+
       </div>
 
       <!-- Foto 2 → reemplaza: TU_FOTO_2.jpg -->
       <div class="masonry-item" onclick="openLightbox('foto2')">
-        <img src="img/40b129fc-d255-4f40-9aa8-acf17918a377.jpg" alt="Natalia y Pablo"
+        <img src="img/Preboda Pablo & Natalia-18.jpg" alt="Natalia y Pablo"
           style="width:100%;display:block;border-radius:3px;">
-        
+
       </div>
 
       <!-- Foto 3 → reemplaza: TU_FOTO_3.jpg -->
       <div class="masonry-item" onclick="openLightbox('foto3')">
         <img src="img/Preboda Pablo & Natalia-20.jpg" alt="Natalia y Pablo"
-        style="width:100%;display:block;border-radius:3px;">
-        
+          style="width:100%;display:block;border-radius:3px;">
+
       </div>
-      
+
       <!-- Foto 4 → reemplaza: TU_FOTO_4.jpg -->
       <div class="masonry-item" onclick="openLightbox('foto4')">
         <img src="img/7857d9a8-fd60-4b42-954f-406a7e2a0b30.jpg" alt="Natalia y Pablo"
-        style="width:100%;display:block;border-radius:3px;">
-        
+          style="width:100%;display:block;border-radius:3px;">
+
       </div>
-      
+
       <!-- Foto 5 → reemplaza: TU_FOTO_5.jpg -->
       <div class="masonry-item" onclick="openLightbox('foto5')">
         <img src="img/60613a1c-09aa-47ad-a5d3-3cb8087cda33.jpg" alt="Natalia y Pablo"
-        style="width:100%;display:block;border-radius:3px;">
-        
+          style="width:100%;display:block;border-radius:3px;">
+
       </div>
-      
+
       <!-- Foto 5 → reemplaza: TU_FOTO_5.jpg -->
       <div class="masonry-item" onclick="openLightbox('foto6')">
-        <img src="img/d63a3142-ec73-419f-96d5-ecb3cb92233f.jpg" alt="Natalia y Pablo"
+        <img src="img/Preboda Pablo & Natalia-10.jpg" alt="Natalia y Pablo"
           style="width:100%;display:block;border-radius:3px;">
-        
+
       </div>
 
   </section>
@@ -195,8 +195,8 @@
     <div class="reveal">
       <span class="quote-mark">"</span>
       <p class="quote-text">
-        Después de tantos momentos compartidos, hoy queremos celebrar el comienzo de nuestra eternidad. Cada paso juntos
-        nos trajo hasta aquí, y este día será el primero de los que nos quedan por vivir.
+        Después de tantos momentos compartidos, queremos celebrar el comienzo de nuestra eternidad. Cada paso juntos nos
+        trajo hasta aquí y este día será el primero de los que nos queda por vivir
       </p>
       <div class="gold-line" style="margin-top:36px"></div>
       <p style="font-family:'Great Vibes',cursive;font-size:2rem;color:var(--rose-dark);margin-top:20px">
@@ -210,7 +210,7 @@
     <div class="evento-inner">
       <div class="reveal" style="text-align:center">
         <p class="section-label">Detalles del evento</p>
-        <h2 class="section-title">La Celebración</h2>
+        <h2 class="section-title">La celebración</h2>
         <div class="gold-line"></div>
         <p class="section-subtitle">Nos encantaría que nos acompañes en este día tan especial</p>
       </div>
@@ -226,15 +226,23 @@
           <p class="evento-card-label">Hora</p>
           <p class="evento-card-value">4:00 PM<br>Ceremonia</p>
         </div>
-        <div class="evento-card">
+        <div class="evento-card" onclick="window.open('https://maps.app.goo.gl/97vUHoGqL7V5yw5o6', '_blank')">
           <span class="evento-icon">📍</span>
           <p class="evento-card-label">Lugar</p>
           <p class="evento-card-value">Casa<br>Borinquen</p>
         </div>
         <div class="evento-card">
           <span class="evento-icon">👗</span>
-          <p class="evento-card-label">Código de vestimenta</p>
-          <p class="evento-card-value">Formal<br>Elegante</p>
+          <p class="evento-card-label">Código de<br>vestimenta</p>
+          <p class="evento-card-value">Semi-formal<br>Boda estilo jardín</p>
+        </div>
+        <div class="evento-card">
+          <span class="evento-icon">🎨</span>
+          <p class="evento-card-label">Colores<br>reservados</p>
+          <p class="evento-card-value">
+            <span class="color-chip blanco"></span>Blanco<br>
+            <span class="color-chip salvia"></span>Verde salvia
+          </p>
         </div>
       </div>
 
@@ -253,47 +261,14 @@
         <p class="section-label">Confirmación de asistencia</p>
         <h2 class="section-title">¿Nos acompañas?</h2>
         <div class="gold-line"></div>
-        <p class="section-subtitle">Por favor confírmanos antes del 1 de septiembre de 2026</p>
-      </div>
 
-      <form class="rsvp-form reveal" id="rsvp-form" onsubmit="submitRSVP(event)">
-        <div class="form-group">
-          <label>Tu nombre completo</label>
-          <input type="text" id="rsvp-nombre" placeholder="Escribe tu nombre" required>
-        </div>
+        <p class="section-subtitle">
+          Por favor confírmanos antes del 1 de septiembre de 2026
+        </p>
 
-        <div class="form-group">
-          <label>¿Asistirás?</label>
-          <div class="radio-group">
-            <div class="radio-opt" id="opt-si" onclick="selectAsistencia('si')">✓ Sí, estaré allí</div>
-            <div class="radio-opt" id="opt-no" onclick="selectAsistencia('no')">✗ No podré asistir</div>
-          </div>
-        </div>
-
-        <div class="form-group" id="group-acomp" style="display:none">
-          <label>Número de acompañantes</label>
-          <select id="rsvp-acomp">
-            <option value="0">Solo yo (0 acompañantes)</option>
-            <option value="1">1 acompañante</option>
-            <option value="2">2 acompañantes</option>
-            <option value="3">3 acompañantes</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label>Mensaje para los novios (opcional)</label>
-          <textarea id="rsvp-mensaje" placeholder="Escribe aquí tus buenos deseos o palabras especiales..."></textarea>
-        </div>
-
-        <input type="hidden" id="rsvp-asistencia" value="">
-        <button type="submit" class="btn-submit">Confirmar asistencia →</button>
-      </form>
-
-      <div class="form-success" id="form-success">
-        <h3>¡Gracias! 🌿</h3>
-        <p>Te estamos redirigiendo a WhatsApp para enviar tu confirmación a Natalia y Pablo.<br>Si no se abre
-          automáticamente, <a href="#" id="wa-fallback-link" style="color:var(--olive-dark);font-weight:600">haz clic
-            aquí</a>.</p>
+        <button class="btn-submit" onclick="openRSVPModal()">
+          Confirmar asistencia →
+        </button>
       </div>
     </div>
   </div>
@@ -304,6 +279,25 @@
     <p class="footer-tagline">Con amor, en este día tan especial</p>
     <p class="footer-date">04 · Octubre · 2026</p>
   </footer>
+
+  <!-- ══════════ MODAL GOOGLE FORM ══════════ -->
+  <div id="rsvp-modal" class="modal-overlay">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>🌿 Confirmación de asistencia</h3>
+      </div>
+
+      <button class="modal-close" onclick="closeRSVPModal()">
+        ✕
+      </button>
+
+      <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLSc1K74hK5x0GsDvpNWBYKDW-VhoC7HBng4pb8JNSkoZ8XAMJg/viewform?embedded=true"
+        loading="lazy">
+      </iframe>
+
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>

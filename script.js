@@ -238,7 +238,7 @@ document.addEventListener("touchstart", startMusicOnce, { once: true });
 // ── LIGHTBOX ──
 const photoSrc = {
   foto1: "img/77458a6b-f664-4470-b741-1483ad69df05.jpg",
-  foto2: "img/40b129fc-d255-4f40-9aa8-acf17918a377.jpg",
+  foto2: "img/Preboda Pablo & Natalia-18.jpg",
   foto3: "img/7857d9a8-fd60-4b42-954f-406a7e2a0b30.jpg",
   foto4: "img/60613a1c-09aa-47ad-a5d3-3cb8087cda33.jpg",
   foto5: "img/d63a3142-ec73-419f-96d5-ecb3cb92233f.jpg",
@@ -367,3 +367,29 @@ function addToCalendar() {
 
   }
 }
+
+function openRSVPModal() {
+  document
+    .getElementById('rsvp-modal')
+    .classList.add('active');
+
+  document.body.style.overflow = 'hidden';
+}
+
+function closeRSVPModal() {
+  document
+    .getElementById('rsvp-modal')
+    .classList.remove('active');
+
+  document.body.style.overflow = '';
+}
+
+document
+  .getElementById('rsvp-modal')
+  .addEventListener('click', function (e) {
+
+    if (e.target === this) {
+      closeRSVPModal();
+    }
+
+  });
