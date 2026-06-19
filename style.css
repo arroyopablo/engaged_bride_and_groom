@@ -640,9 +640,11 @@ section {
 }
 
 .evento-icon {
-  font-size: 2rem;
-  margin-bottom: 16px;
+  width: 88px;
+  height: 88px;
+  margin: 0 auto 16px auto;
   display: block;
+  object-fit: contain;
 }
 
 .evento-card-label {
@@ -661,29 +663,52 @@ section {
   line-height: 1.5;
 }
 
-.btn-calendar {
+.btn-gadget {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  margin-top: 48px;
-  padding: 14px 36px;
-  background: var(--olive);
-  color: white;
-  border: none;
-  border-radius: 1px;
-  cursor: pointer;
+  gap: 10px;
+
+  margin-top: 24px;
+  padding: 16px 32px;
+
+  background: white;
+  color: var(--olive);
+
+  border: 1px solid var(--gold);
+  border-radius: 50px;
+
   font-family: 'Montserrat', sans-serif;
-  font-size: 0.7rem;
+  font-size: 0.67rem;
   font-weight: 600;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
-  transition: background 0.3s, transform 0.2s;
+
   text-decoration: none;
+  cursor: pointer;
+
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
-.btn-calendar:hover {
-  background: var(--olive-dark);
-  transform: translateY(-2px);
+.btn-gadget:hover {
+  background: var(--olive);
+  color: white;
+  transform: translateY(-3px);
+
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.btn-gadget:active {
+  transform: translateY(-1px);
+}
+
+.btn-gadget .icon {
+  font-size: 1.1rem;
 }
 
 /* ── RSVP ── */
@@ -1044,6 +1069,15 @@ footer {
   background: #A8B89A;
 }
 
+.nota {
+  font-family: 'Cormorant Garamond', serif;
+  color: var(--text-mid);
+  font-weight: 300;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-style: italic;
+  position: relative;
+}
+
 .modal-overlay {
   position: fixed;
   inset: 0;
@@ -1129,4 +1163,152 @@ footer {
 
 .modal-close:hover {
   transform: scale(1.05);
+}
+
+.dresscode-modal {
+  position: fixed;
+  inset: 0;
+
+  background: rgba(0, 0, 0, .75);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition: all .3s ease;
+  z-index: 9999;
+}
+
+.dresscode-modal.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dresscode-content {
+  background: white;
+  width: 90%;
+  max-width: 900px;
+
+  border-radius: 8px;
+  padding: 40px;
+
+  position: relative;
+
+  max-height: 90vh;
+  overflow-y: auto;
+
+  animation: modalFade .3s ease;
+}
+
+@keyframes modalFade {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.dresscode-content h2 {
+  text-align: center;
+  color: var(--olive);
+  margin-bottom: 10px;
+}
+
+.dresscode-description {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #666;
+}
+
+.dresscode-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.dresscode-gallery img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  transition: transform .3s ease;
+}
+
+.dresscode-gallery img:hover {
+  transform: scale(1.03);
+}
+
+.dresscode-close {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+
+  border: none;
+  background: none;
+
+  font-size: 2rem;
+  cursor: pointer;
+
+  color: var(--olive);
+}
+
+#versiculos {
+  padding: 120px 24px;
+  background: #faf9f6;
+}
+
+.versiculos-grid {
+  max-width: 1100px;
+  margin: 60px auto 0;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+}
+
+.versiculo-card {
+  background: white;
+  padding: 50px 40px;
+  text-align: center;
+
+  border-top: 2px solid var(--gold);
+  box-shadow: 0 2px 24px rgba(0, 0, 0, .04);
+
+  transition: transform .3s ease;
+}
+
+.versiculo-card:hover {
+  transform: translateY(-4px);
+}
+
+.versiculo-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem;
+  color: var(--olive);
+  margin-bottom: 25px;
+}
+
+.versiculo-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  line-height: 1.8;
+  color: #555;
+  font-style: italic;
+}
+
+.versiculo-ref {
+  margin-top: 25px;
+
+  font-family: 'Montserrat', sans-serif;
+  font-size: .8rem;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+
+  color: var(--gold);
 }

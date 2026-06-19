@@ -142,7 +142,7 @@
       <p class="section-label">Nuestra historia en imágenes</p>
       <h2 class="section-title">Momentos que atesoramos</h2>
       <div class="gold-line"></div>
-      <p class="section-subtitle">Cada fotografía cuenta un capítulo de nuestra historia de amor</p>
+      <p class="section-subtitle">Nosotros amamos porque él nos amó primero (1 Juan 4:19).</p>
     </div>
 
     <div class="masonry reveal">
@@ -205,6 +205,40 @@
     </div>
   </section>
 
+  <!-- ══════════ VERSÍCULOS DEDICADOS ══════════ -->
+  <section id="versiculos">
+    <div class="reveal" style="text-align:center">
+      <p class="section-label">Palabras de nuestro corazón</p>
+      <h2 class="section-title">Versículos dedicados</h2>
+      <div class="gold-line"></div>
+    </div>
+
+    <div class="versiculos-grid reveal">
+
+      <div class="versiculo-card">
+        <p class="versiculo-title">De Pablo para Natalia</p>
+
+        <p class="versiculo-text">
+          «Ponme como un sello sobre tu corazón, como una marca sobre tu brazo;
+          porque fuerte es el amor como la muerte, y tenaz la pasión como el sepulcro».
+        </p>
+
+        <p class="versiculo-ref">Cantares 8:6</p>
+      </div>
+
+      <div class="versiculo-card">
+        <p class="versiculo-title">De Natalia para Pablo</p>
+
+        <p class="versiculo-text">
+          «Mi amado es mío, y yo soy suya; él apacienta entre lirios».
+        </p>
+
+        <p class="versiculo-ref">Cantares 2:16</p>
+      </div>
+
+    </div>
+  </section>
+
   <!-- ══════════ EVENTO ══════════ -->
   <div id="evento">
     <div class="evento-inner">
@@ -217,40 +251,43 @@
 
       <div class="evento-cards reveal">
         <div class="evento-card">
-          <span class="evento-icon">📆</span>
-          <p class="evento-card-label">Fecha</p>
+          <img src="img/icon/Fecha.png" alt="Fecha" class="evento-icon">
+          <p class="evento-card-label">Fecha<br><br></p>
           <p class="evento-card-value">04 de Octubre<br>de 2026</p>
+          <a href="#" onclick="addToCalendar(); return false;" class="btn-gadget">
+            📆 Agregar al calendario
+          </a>
         </div>
         <div class="evento-card">
-          <span class="evento-icon">🕓</span>
-          <p class="evento-card-label">Hora</p>
+          <img src="img/icon/Hora.png" alt="Hora" class="evento-icon">
+          <p class="evento-card-label">Hora<br><br></p>
           <p class="evento-card-value">4:00 PM<br>Ceremonia</p>
         </div>
         <div class="evento-card" onclick="window.open('https://maps.app.goo.gl/97vUHoGqL7V5yw5o6', '_blank')">
-          <span class="evento-icon">📍</span>
-          <p class="evento-card-label">Lugar</p>
+          <img src="img/icon/Lugar_.png" alt="Lugar" class="evento-icon">
+          <p class="evento-card-label">Lugar <br><br></p>
           <p class="evento-card-value">Casa<br>Borinquen</p>
+          <p class="btn-gadget">📍Ver en Google Maps</p>
         </div>
-        <div class="evento-card">
-          <span class="evento-icon">👗</span>
+        <div class="evento-card" id="dresscodeCard">
+          <img src="img/icon/Dresscode_.png" alt="Vestimenta" class="evento-icon">
           <p class="evento-card-label">Código de<br>vestimenta</p>
           <p class="evento-card-value">Semi-formal<br>Boda estilo jardín</p>
+          <p class="btn-gadget">👗 Ver ejemplos</p>
         </div>
         <div class="evento-card">
-          <span class="evento-icon">🎨</span>
+          <img src="img/icon/Colores.png" alt="Colores" class="evento-icon">
           <p class="evento-card-label">Colores<br>reservados</p>
           <p class="evento-card-value">
             <span class="color-chip blanco"></span>Blanco<br>
-            <span class="color-chip salvia"></span>Verde salvia
+            <span class="color-chip salvia"></span>Verde salvia<br>
           </p>
+          <br>
+          <p class="nota">*Colores reservados para los novios y el cortejo.</p>
         </div>
       </div>
 
-      <div style="text-align:center">
-        <a href="#" onclick="addToCalendar(); return false;" class="btn-calendar">
-          📆 Agregar al calendario
-        </a>
-      </div>
+
     </div>
   </div>
 
@@ -263,7 +300,7 @@
         <div class="gold-line"></div>
 
         <p class="section-subtitle">
-          Por favor confírmanos antes del 1 de septiembre de 2026
+          Plazo máximo para confirmar tu asistencia: 1 de septiembre de 2026
         </p>
 
         <button class="btn-submit" onclick="openRSVPModal()">
@@ -276,7 +313,8 @@
   <!-- ══════════ FOOTER ══════════ -->
   <footer>
     <div class="footer-names">Natalia & Pablo</div>
-    <p class="footer-tagline">Con amor, en este día tan especial</p>
+    <p class="footer-tagline">Uno solo puede ser vencido, pero dos pueden resistir. ¡La cuerda de tres hilos no se
+      rompe fácilmente!(Eclesiastés 4:12)</p>
     <p class="footer-date">04 · Octubre · 2026</p>
   </footer>
 
@@ -295,6 +333,27 @@
         src="https://docs.google.com/forms/d/e/1FAIpQLSc1K74hK5x0GsDvpNWBYKDW-VhoC7HBng4pb8JNSkoZ8XAMJg/viewform?embedded=true"
         loading="lazy">
       </iframe>
+
+    </div>
+  </div>
+
+  <!-- ══════════ MODAL DRESSCODE ══════════ -->
+  <div id="dresscodeModal" class="dresscode-modal">
+    <div class="dresscode-content">
+
+      <button class="dresscode-close">&times;</button>
+
+      <h2>Código de Vestimenta</h2>
+
+      <p class="dresscode-description">
+        Semi-formal · Boda estilo jardín
+      </p>
+
+      <div class="dresscode-gallery">
+
+        <img src="img/dresscode.png" alt="Vestimenta">
+
+      </div>
 
     </div>
   </div>

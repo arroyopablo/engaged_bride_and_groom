@@ -393,3 +393,21 @@ document
     }
 
   });
+
+const dresscodeCard = document.getElementById('dresscodeCard');
+const dresscodeModal = document.getElementById('dresscodeModal');
+const dresscodeClose = document.querySelector('.dresscode-close');
+
+dresscodeCard.addEventListener('click', () => {
+  dresscodeModal.classList.add('show');
+});
+
+dresscodeClose.addEventListener('click', () => {
+  dresscodeModal.classList.remove('show');
+});
+
+dresscodeModal.addEventListener('click', (e) => {
+  if (e.target === dresscodeModal) {
+    dresscodeModal.classList.remove('show');
+  }
+});
