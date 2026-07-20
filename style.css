@@ -612,7 +612,7 @@ section {
 }
 
 .evento-inner {
-  max-width: 1260px;
+  max-width: 80%;
   margin: 0 auto;
 }
 
@@ -1067,6 +1067,10 @@ footer {
 
 .color-chip.salvia {
   background: #A8B89A;
+}
+
+.color-chip.azul-marino {
+  background: #000080;
 }
 
 .nota {
